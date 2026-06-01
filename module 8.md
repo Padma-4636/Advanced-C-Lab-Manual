@@ -22,49 +22,39 @@ int main()
 {
     int n;
 
-    printf("Enter a number from 1 to 9: ");
     scanf("%d", &n);
 
     switch(n)
     {
-        case 1:
+        case 71:
             printf("seventy one");
             break;
-
-        case 2:
+        case 72:
             printf("seventy two");
             break;
-
-        case 3:
+        case 73:
             printf("seventy three");
             break;
-
-        case 4:
+        case 74:
             printf("seventy four");
             break;
-
-        case 5:
+        case 75:
             printf("seventy five");
             break;
-
-        case 6:
+        case 76:
             printf("seventy six");
             break;
-
-        case 7:
+        case 77:
             printf("seventy seven");
             break;
-
-        case 8:
+        case 78:
             printf("seventy eight");
             break;
-
-        case 9:
+        case 79:
             printf("seventy nine");
             break;
-
         default:
-            printf("Greater than 9");
+            printf("Greater than 79");
     }
 
     return 0;
@@ -77,7 +67,8 @@ int main()
 Output:
 
 
-<img width="1230" height="970" alt="image" src="https://github.com/user-attachments/assets/79545924-ba4b-4cad-a4f0-58dd796491d3" />
+<img width="1479" height="827" alt="image" src="https://github.com/user-attachments/assets/a0895cc9-abd0-4808-acdb-7440882d2584" />
+
 
 
 
