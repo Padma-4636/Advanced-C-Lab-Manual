@@ -15,13 +15,37 @@ Else
 6.	Return 0
  
 Program:
+~~~
+#include <stdio.h>
 
-//type your code here
+struct eligible
+{
+    int age;
+    char n[50];
+};
 
+int main()
+{
+    struct eligible e;
+
+    printf("Enter name: ");
+    scanf("%s", e.n);
+
+    printf("Enter age: ");
+    scanf("%d", &e.age);
+
+    if (e.age <= 6)
+        printf("Vaccine Eligibility: No\n");
+    else
+        printf("Vaccine Eligibility: Yes\n");
+    return 0;
+}
+~~~
 
 Output:
 
-//paste your output here
+<img width="1610" height="921" alt="image" src="https://github.com/user-attachments/assets/47c038aa-0de5-4e30-a466-80a953951dd2" />
+
 
 
 Result:
@@ -44,15 +68,45 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
 
+struct numbers
+{
+    int a;
+    int b;
+};
 
+struct numbers add(struct numbers n)
+{
+    struct numbers result;
+    result.a = n.a + n.b;  // store sum
+    result.b = 0;
+    return result;
+}
 
+int main()
+{
+    struct numbers n, res;
+
+    printf("Enter value of a: ");
+    scanf("%d", &n.a);
+
+    printf("Enter value of b: ");
+    scanf("%d", &n.b);
+
+    res = add(n);
+
+    printf("Sum = %d\n", res.a);
+
+    return 0;
+}
+```
 
 Output:
 
+<img width="1346" height="919" alt="image" src="https://github.com/user-attachments/assets/d86497da-3a11-4836-924c-5805802c20dc" />
 
-//paste your output here
 
 
 
@@ -86,22 +140,34 @@ Use scanf to input the file name into the name array.
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    FILE *p;
+    char name[100];
+    printf("Enter the file name: ");
+    scanf("%s", name);
+    printf("File '%s' created successfully.\n", name);
+    p = fopen(name, "w");
+
+    if (p == NULL){
+        printf("Error opening file.\n");
+        return 1;
+    }
+    printf("File opened successfully.\n");
+    fclose(p);
+    printf("File closed successfully.\n");
+    return 0;
+}
+```
 
 
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
-
-
+<img width="1490" height="912" alt="image" src="https://github.com/user-attachments/assets/a32942cb-a1e6-4abd-87a2-f514d2c67ad6" />
 
 
 
