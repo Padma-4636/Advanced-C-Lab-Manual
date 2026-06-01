@@ -15,8 +15,61 @@ Algorithm:
 4.	Exit the program.
  
 Program:
+```
+#include <stdio.h>
 
-//type your code here
+int main()
+{
+    int n;
+
+    printf("Enter a number from 1 to 9: ");
+    scanf("%d", &n);
+
+    switch(n)
+    {
+        case 1:
+            printf("seventy one");
+            break;
+
+        case 2:
+            printf("seventy two");
+            break;
+
+        case 3:
+            printf("seventy three");
+            break;
+
+        case 4:
+            printf("seventy four");
+            break;
+
+        case 5:
+            printf("seventy five");
+            break;
+
+        case 6:
+            printf("seventy six");
+            break;
+
+        case 7:
+            printf("seventy seven");
+            break;
+
+        case 8:
+            printf("seventy eight");
+            break;
+
+        case 9:
+            printf("seventy nine");
+            break;
+
+        default:
+            printf("Greater than 9");
+    }
+
+    return 0;
+}
+```
 
 
 
@@ -24,10 +77,7 @@ Program:
 Output:
 
 
-//paste your output here
-
-
-
+<img width="1230" height="970" alt="image" src="https://github.com/user-attachments/assets/79545924-ba4b-4cad-a4f0-58dd796491d3" />
 
 
 
@@ -47,18 +97,41 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+
+int main()
+{
+    char a[50];
+    int i, h, c;
+
+    printf("Enter the string of digits: ");
+    scanf("%s", a);
+
+    for(h = 0; h <= 3; h++)
+    {
+        c = 0;
+
+        for(i = 0; a[i] != '\0'; i++)
+        {
+            if(a[i] == h + '0')
+            {
+                c++;
+            }
+        }
+
+        printf("%d ", c);
+    }
+
+    return 0;
+}
+```
 
 
 
 
 Output:
-
-
-//paste your output here
-
-
-
+<img width="651" height="1002" alt="image" src="https://github.com/user-attachments/assets/9e1962ab-0e58-4403-8a56-bbd5388a9292" />
 
 
 
@@ -83,20 +156,56 @@ Free the memory allocated for each string in s Free the memory allocated for s
 7.	End
  
 Program:
+```
+#include <stdio.h>
+#include <string.h>
 
-//type your code here
+void swap(char *a, char *b)
+{
+    char temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+void permute(char s[], int l, int r)
+{
+    int i;
+
+    if(l == r)
+    {
+        printf("%s\n", s);
+    }
+    else
+    {
+        for(i = l; i <= r; i++)
+        {
+            swap(&s[l], &s[i]);
+            permute(s, l + 1, r);
+            swap(&s[l], &s[i]);
+        }
+    }
+}
+int main()
+{
+    char s[20];
+    int n;
+
+    printf("Enter the string: ");
+    scanf("%s", s);
+
+    n = strlen(s);
+
+    permute(s, 0, n - 1);
+
+    return 0;
+}
 
 
-
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
+<img width="972" height="741" alt="image" src="https://github.com/user-attachments/assets/55ade8fc-f8e3-4259-be7b-540c30c71214" />
 
 
 Result:
@@ -117,7 +226,43 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j, min;
+    int len;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    len = n * 2 - 1;
+
+    for(i = 0; i < len; i++)
+    {
+        for(j = 0; j < len; j++)
+        {
+            min = i;
+
+            if(j < min)
+                min = j;
+
+            if(len - 1 - i < min)
+                min = len - 1 - i;
+
+            if(len - 1 - j < min)
+                min = len - 1 - j;
+
+            printf("%d ", n - min);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
 
 
 
@@ -125,11 +270,7 @@ Program:
 Output:
 
 
-//paste your output here
-
-
-
-
+<img width="978" height="640" alt="image" src="https://github.com/user-attachments/assets/9df859d3-3271-47e7-8040-e0407cf5a00f" />
 
 
 Result:
@@ -156,20 +297,37 @@ o	Call the square() function and display the result.
 
 Program:
 
-//type your code here
+```
+#include <stdio.h>
 
+int square()
+{
+    int n, sq;
 
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    sq = n * n;
+
+    return sq;
+}
+
+int main()
+{
+    int result;
+
+    result = square();
+
+    printf("Square of the number = %d", result);
+
+    return 0;
+}
+```
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
+<img width="577" height="924" alt="image" src="https://github.com/user-attachments/assets/9c6d74eb-cc02-463f-85d8-93c7760a7a39" />
 
 Result:
 Thus, the program is verified successfully
